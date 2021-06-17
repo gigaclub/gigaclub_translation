@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <tree string="Translations">
                     <field name="name" />
+                    <field name="var_count" />
                     <field name="translation_entry_ids" />
                 </tree>
             </field>
@@ -20,6 +21,7 @@
                 <form>
                     <group>
                         <field name="name" />
+                        <field name="var_count" readonly="1" />
                         <field name="translation_entry_ids" />
                     </group>
                 </form>

@@ -8,9 +8,11 @@
     "license": "Other proprietary",
     "depends": ["gigaclub_base"],
     "data": [
+        "data/gc_language_data.xml",
         "views/gc_language_views.xml",
         "views/gc_translation_views.xml",
         "views/gc_translation_entry_views.xml",
+        "views/gc_user_views.xml",
         "views/menu_views.xml",
         "security/ir.model.access.csv",
     ],

@@ -9,6 +9,7 @@
                 <tree string="Translations">
                     <field name="name" />
                     <field name="entry_ids" />
+                    <field name="default" />
                 </tree>
             </field>
         </record>
@@ -21,6 +22,7 @@
                     <group>
                         <field name="name" />
                         <field name="entry_ids" />
+                        <field name="default" />
                     </group>
                 </form>
             </field>
