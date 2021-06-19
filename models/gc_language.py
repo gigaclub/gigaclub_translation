@@ -9,6 +9,10 @@ class GCLanguage(models.Model):
     entry_ids = fields.One2many(comodel_name="gc.translation.entry", inverse_name="translation_id")
     default = fields.Boolean()
 
+    _sql_constraints = [
+        ('name_unique', 'unique (name)', 'name must be unique!')
+    ]
+
     @api.constrains("default")
     def _check_default(self):
         for rec in self:
