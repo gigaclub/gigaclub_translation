@@ -25,9 +25,9 @@ class GCTranslation(models.Model):
                 "var_count": len(values),
             })
         language_id = self.env["gc.user"].search([("mc_uuid", "=", player_uuid)]).language_id
-        entry_id = self.env["gc.translation.entry"].search([("language_id", "=", language_id.id)]).filtered(lambda x: translation_id.id in x.translation_ids)
-        if len(entry_id) == 1:
-            return entry_id.content
+        entry_id = self.env["gc.translation.entry"].search([("language_id", "=", language_id.id)]).filtered(lambda x: translation_id in x.translation_ids)
+        if len(entry_id) > 0:
+            return entry_id[0].content
         return translation_id.name
 
 
